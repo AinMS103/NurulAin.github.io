@@ -1,0 +1,395 @@
+<html>
+<head>
+<title>Gallery</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<font face="arial">
+<body>
+<div align="center">
+<font color="grey">
+<h6> An error occured, audio unable to autoplay</h6>
+</font>
+<audio controls autoplay>
+<source src="sounds/mylove.ogg" type="audio/ogg">
+<source src="sounds/mylove.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<br>
+<br>
+<nav>
+<div class="topnav" id="mytopnav">
+<p align="center">
+<th><a href="index.html" target="blank">Home</a><th>  |
+<th><a href="biodata.html" target="blank">Biodata</a><th>  | 
+<th><a href="experience_education.html" target="blank">Experience & Education</a><th>  |
+<th><a href="family_friends.html" target="blank">Friends & Family</a><th>  |
+<th><a href="mybusiness.html" target="blank">My Business</a><th> | 
+<th><a href="gallery.html" target="blank">Gallery</a><th>  |
+</a>
+</div>
+
+<p><form>
+<div align="right">
+<input type="search" placeholder="Search for...">
+<input type="submit" value="search">
+</div>
+</p></form>
+<br>
+<div align="center">
+<h1><b>GALLERY</b></h1>
+<br>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: arial; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="images/cappadocia.jpg" alt="Cappadocia Hot Air Balloon" width="600px" height="400px">
+  <div class="text">Cappadocia</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="images/hagiasophia.jpg" alt="Hagia Sophia Mosque"  width="600px" height="400px">
+  <div class="text">Hagia Sophia</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="images/topkapipalace.jpg" alt="Topkapi Palace"  width="600px" height="400px">
+  <div class="text">Topkapi Palace</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="images/pamukkale.jpg"  alt="Thermal Pool Pamukkale"  width="600px" height="400px">
+  <div class="text">Thermal Pool Pamukkale</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+<div align="center">
+<font color="black"><h4> My Bucket List</h4>
+<font color="#E30B5D">
+<h5> Land of 4 Seasons, Turkey</h5>
+</font>
+<p>Turkey, country that occupies a unique geographic position, lying partly in Asia and partly in Europe. Turkey is situated at the crossroads of the Balkans, Caucasus, and eastern Mediterranean. <span id="dots">...</span><span id="more">It is among the larger countries of the region in terms of territory and population, and its land area is greater than any of any European state. Nearly all of the country is in Asia, comprising the oblong peninsula of Asia Minor also known as Anatolia (Anadolu) and, in the east, part of a mountainous region sometimes known as the Armenian Highland. The remainder—Turkish Thrace (Trakya) lies in the extreme southeastern part of Europe, a tiny remnant of an empire that once extended over much of the Balkans. Turkey has a very diverse culture that is a blend of various elements of the Turkic, Anatolian, Ottoman (which was itself a continuation of both Greco-Roman and Islamic cultures) and Western culture and traditions, which started with the Westernisation of the Ottoman Empire and still continues today.</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+<br>
+<br>
+<div align="center">
+<embed src="videos/turkeytour.mp4" alt="Istanbul Video" width="400px" height="300px" autostart="false">
+</embed>
+</div>
+<br>
+<p><center><div style="background-color:#F5CBA7">
+<h2><a name="first"><font face="arial"font color="#F5CBA7">...</font></a></center>
+<font color="#B666D2"><h2><p align="center">MY SHORT TRIP TO PANTAI MERDEKA WITH FRIENDS</p></h2></font>
+<p><center><div style="background-color:#F5CBA7">
+<h2><a name="first"><font face="arial"font color="#F5CBA7">...</font></a></center>
+</div>
+<br>
+<div align="center">
+<embed src="videos/shorttrip.mp4" alt="Pantai Merdeka Trip" width="400px" height="300px" autostart="false">
+</embed>
+<br>
+<br>
+<img src="images/trippantai1.jpg" width="350px" height="200px"> <img src="images/trippantai2.jpg" width="350px" height="200px"> <img src="images/trippantai3.jpeg" width="350px" height="200px"> 
+</div>
+<br>
+<br>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+</style>
+</head>
+
+<div class="header" id="myHeader">
+  <h1><b>Moments in UiTM<b></h1></div>
+<div align="center">
+<img src="images/lovegif.gif" width="200px" height="200px"> <img src="images/lovegif.gif" width="200px" height="200px"> <img src="images/lovegif.gif" width="200px" height="200px"> 
+</img> 
+</div>
+<div align="center">
+<font color="#E45E9D">
+<h4>APPOINTED AS THE VICE PRESIDENT OF KELAB SEJARAH & WARISAN KEDAH UITM KEDAH 2021/2022</h4>
+<img src="images/kswkphoto.jpg" width="450px" height="460px"></p>
+<br>
+<br>
+<font color="#E45E9D">
+<h4>OLD & NEW FRIENDS IN UITM KEDAH</h4>
+<!-- Photo Grid -->
+<div align="center">
+<div class="row"> 
+  <div class="column">
+    <img src="images/friends1.jpg" width="300px" height="200px">
+    <img src="images/friends2.jpg" width="300px" height="200px">
+    <img src="images/friends3.jpg" width="300px" height="200px">
+    <img src="images/friends4.jpg" width="300px" height="200px">
+    <img src="images/friends5.jpg" width="300px" height="200px">
+    <img src="images/friends6.jpg" width="300px" height="200px">
+    <img src="images/friends7.jpg" width="300px" height="200px">
+    <img src="images/friends8.jpg" width="300px" height="200px">
+    <img src="images/friends9.jpg" width="300px" height="200px">   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<font color="#0020C2"><h3> HOLD ON! RAISE YOUR VOLUME AND ENJOY!</h3></font>
+<br>
+<h4> Radja - Jujur</h4>
+<font color="#E45E9D">
+<embed src="sounds/jujur_radja.mp3"</embed> <h4> Kris - Tiara</h4><embed src="sounds/tiara_kris.mp3"</embed>
+<br>
+
+</div>
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<div align="center">
+<br>
+<br>
+<br>
+
+<br>
+</div>
