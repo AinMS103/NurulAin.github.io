@@ -1,0 +1,6 @@
+} 
+ 
+.list--centre-justify { 
+  display: grid; 
+  place-items: center; 
+} 
